@@ -1,5 +1,5 @@
 # Gunakan image PHP-FPM standar sebagai basis
-FROM php:8.3-fpm-alpine # Atau php:8.3-fpm
+FROM php:8.3-fpm-alpine
 
 # Atur working directory di dalam container
 WORKDIR /var/www/html
@@ -7,7 +7,7 @@ WORKDIR /var/www/html
 # Copy kode aplikasi Laravel-mu ke dalam container
 COPY . /var/www/html
 
-# Instal Composer (pastikan sudah ada di image basis atau instal dulu jika perlu)
+# Instal Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Instal dependensi Composer
