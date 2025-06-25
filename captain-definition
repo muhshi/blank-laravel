@@ -1,4 +1,4 @@
 {
   "schemaVersion": 2,
-  "templateId": "img-captain-magang:latest"
+  "dockerfilePath": "./Dockerfile"
 }
