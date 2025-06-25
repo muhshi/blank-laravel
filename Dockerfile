@@ -1,5 +1,5 @@
 # Gunakan image PHP-FPM standar sebagai basis
-FROM php:8.3-fpm-alpine # Atau php:8.3-fpm jika ingin basis Debian/Ubuntu
+FROM php:8.3-fpm-alpine # Atau php:8.3-fpm
 
 # Atur working directory di dalam container
 WORKDIR /var/www/html
