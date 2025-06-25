@@ -1,4 +1,5 @@
 {
   "schemaVersion": 2,
-  "templateId": "php-apache"
+  "templateId": "php-apache",
+  "templateVersion": "1"
 }
