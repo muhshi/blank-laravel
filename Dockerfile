@@ -7,6 +7,10 @@ WORKDIR /var/www/html
 # Copy kode aplikasi Laravel-mu ke dalam container
 COPY . /var/www/html
 
+# UBAH 'listen' directive di konfigurasi pool PHP-FPM
+# agar mendengarkan di IP 0.0.0.0
+RUN sed -i 's/listen = 127.0.0.1:9000/listen = 0.0.0.0:9000/g' /usr/local/etc/php-fpm.d/www.conf
+
 # Instal Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
